@@ -186,7 +186,6 @@ class Ui_MainWindow(object):
             else:
                 try:
                     response = wget.download(url)
-                    self.windowDownload(url)
                     if response != None :
                         self.counterRow -= 1
                         self.downloadComplete = True
@@ -213,9 +212,6 @@ class Ui_MainWindow(object):
         pass
 
     def exitProgram(self):
-        file = open("link.txt", "w")
-        file.write("")
-        file.close()
         exit(0)
 
 if __name__ == "__main__":
